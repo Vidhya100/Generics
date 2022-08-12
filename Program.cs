@@ -8,18 +8,18 @@ namespace GenericmaxNumber
         {
 
             Console.WriteLine("Enter the First number: ");
-            int first = Convert.ToInt32(Console.ReadLine());
+            float first = Convert.ToSingle(Console.ReadLine());
 
             Console.WriteLine("Enter the second number: ");
-            int second = Convert.ToInt32(Console.ReadLine());
+            float second = Convert.ToSingle(Console.ReadLine());
 
             Console.WriteLine("Enter the third number: ");
-            int third = Convert.ToInt32(Console.ReadLine());
+            float third = Convert.ToSingle(Console.ReadLine());
 
-            MaxNumber<int> maxnumObj = new MaxNumber<int>(first, second, third);
-            int maxNumber = maxnumObj.GetMaxNum();
+            MaxNumber<float> maxnumObj = new MaxNumber<float>(first, second, third);
+            var maxNumber = maxnumObj.GetMaxNum();
 
-            Console.WriteLine("your max number {0}", maxNumber);
+            Console.WriteLine("your max float number {0}", maxNumber);
         }
     }
 }
