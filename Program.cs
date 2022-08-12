@@ -7,19 +7,19 @@ namespace GenericmaxNumber
         public static void Main(string[] args)
         {
 
-            Console.WriteLine("Enter the First number: ");
-            float first = Convert.ToSingle(Console.ReadLine());
+            Console.WriteLine("Enter the First string: ");
+            string first = Console.ReadLine();
 
-            Console.WriteLine("Enter the second number: ");
-            float second = Convert.ToSingle(Console.ReadLine());
+            Console.WriteLine("Enter the second string: ");
+            string second = Console.ReadLine();
 
-            Console.WriteLine("Enter the third number: ");
-            float third = Convert.ToSingle(Console.ReadLine());
+            Console.WriteLine("Enter the third string: ");
+            string third = Console.ReadLine();
 
-            MaxNumber<float> maxnumObj = new MaxNumber<float>(first, second, third);
-            var maxNumber = maxnumObj.GetMaxNum();
+            MaxNumber<string> maxnumObj = new MaxNumber<string>(first, second, third);
+            string last = maxnumObj.GetLastString();
 
-            Console.WriteLine("your max float number {0}", maxNumber);
+            Console.WriteLine("The last string in the sort order by comparedTo method is : {0}", last);
         }
     }
 }

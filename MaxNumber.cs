@@ -16,7 +16,7 @@ namespace GenericMaxNumber
             this.second = second;
             this.third = third;
         }
-        public T GetMaxNum()
+        public T GetLastString()
         {
             if (first.CompareTo(second) == 0)
             {
