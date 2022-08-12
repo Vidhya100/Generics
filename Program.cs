@@ -6,21 +6,20 @@ namespace GenericmaxNumber
     {
         public static void Main(string[] args)
         {
-            
 
-            Console.WriteLine("Enter the First string: ");
-            string first= Console.ReadLine();
+            Console.WriteLine("Enter the First number: ");
+            int first = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Enter the second string: ");
-            string second= Console.ReadLine();
+            Console.WriteLine("Enter the second number: ");
+            int second = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Enter the third string: ");
-            string third = Console.ReadLine();
+            Console.WriteLine("Enter the third number: ");
+            int third = Convert.ToInt32(Console.ReadLine());
 
-            MaxNumber maxnumObj = new MaxNumber(first,second,third);
-            string last = maxnumObj.GetLastString();
+            MaxNumber<int> maxnumObj = new MaxNumber<int>(first, second, third);
+            int maxNumber = maxnumObj.GetMaxNum();
 
-            Console.WriteLine("The last string in the sort order by comparedTo method is : {0}", last);
+            Console.WriteLine("your max number {0}", maxNumber);
         }
     }
 }

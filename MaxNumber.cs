@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace GenericMaxNumber
 {
-    public class MaxNumber
+    public class MaxNumber<T> where T : IComparable<T>
     {
-        public string first, second, third;
+        public T first, second, third;
 
-        public MaxNumber(string first, string second, string third)
+        public MaxNumber(T first, T second, T third)
         {
             this.first = first;
             this.second = second;
             this.third = third;
         }
-        public string GetLastString()
+        public T GetMaxNum()
         {
             if (first.CompareTo(second) == 0)
             {
