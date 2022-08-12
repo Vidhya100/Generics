@@ -8,19 +8,34 @@ namespace GenericMaxNumber
 {
     public class MaxNumber
     {
-        public float first, second, third;
+        public string first, second, third;
 
-        public MaxNumber(float first, float second, float third)
+        public MaxNumber(string first, string second, string third)
         {
             this.first = first;
             this.second = second;
             this.third = third;
         }
-        public float GetMaxNum()
+        public string GetLastString()
         {
-            if (first.CompareTo(second) == 1 && first.CompareTo(third) ==1)
+            if (first.CompareTo(second) == 0)
+            {
+                if (first.CompareTo(third) == 1)
+                    return first;
+                else
+                    return third;
+            }
+            else if (first.CompareTo(third) == 0)
+            {
+                if (first.CompareTo(second) == 1)
+                    return first;
+                else
+                    return second;
+            }
+
+            if (first.CompareTo(second) > 0 && first.CompareTo(third) > 0)
                 return first;
-            else if (second.CompareTo(first) == 1 && second.CompareTo(third) == 1)
+            else if (second.CompareTo(first) > 0 && second.CompareTo(third) > 0)
                 return second;
             else
                 return third;
